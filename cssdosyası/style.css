@@ -1,0 +1,322 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --bg-color: rgb(205, 214, 214);
+    --second-bg-color: #00000009;
+    --text-color: rgb(0, 0, 0);
+    --second-color: rgb(0, 0, 0);
+    --main-color: #ff0505;
+    --big-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+    --menu-color: #1027f1;
+    --span-color: rgb(250, 150, 1);
+    --header-color: #ddd3d3;
+    --hak-color: #000000;
+    --footer-color: #a05704;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 22px 15%;
+    border-bottom: 1px solid transparent;
+    transition: all .45s ease;
+    background-color: var(--header-color);
+}
+.etiket {
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+span {
+    color: var(--span-color);
+}
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px;
+    color: var(--span-color);
+    background-color: var(--header-color);    
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    display: block;
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+}
+button {
+    border: none;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    font-size: 18px;
+}
+button:hover {
+    background-color: var(--span-color);
+    border-radius: 25px
+}
+.buton {
+    background-color: var(--span-color);
+}
+.a {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.a:hover {
+    color: var(--span-color);
+}
+section {
+    padding: 160px 15% 120px;
+}
+header .sticky {
+    background: var(--bg-color)
+}
+.main-text {
+    text-align: center;
+}
+.main-text p {
+    color: var(--second-color);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.main-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+
+.products-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+.box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.box img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+.box:hover img {
+    transform: scale(1.1);
+}
+.box:hover .boxlayer {
+    height: 100%;
+}
+.boxlayer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1), #fa7900);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+.boxlayer h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.boxlayer p {
+    color: var(--second-color);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.tarihçe {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.tarihçe-img img {
+    max-width: 400px;
+    opacity: 0.4;
+    height: auto;
+    width: 80%;
+    border-radius: 8px;
+}
+.tarihçe-img img:hover{
+    opacity: 0.9;  
+}
+.tarihçe-text h2 {
+    font-size: var(--h2-font);
+    line-height: 2;
+    align-items: center;
+}
+.tarihçe-text p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 1.8;
+    margin-bottom: 4rem;
+}
+#lava {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;   
+}
+.hakkımızda {
+    position: relative;
+    align-items: center;
+    gap: 1.5rem;
+}
+.hakkımızda-vid {
+    height: auto;
+    float: left;
+    margin: auto;
+}
+.hakkımızda-text h4 {
+    font-size: var(--h2-font-);
+    color: var(--span-color);
+    line-height: 2;
+    align-items: center;
+}
+.hakkımızda-text p {
+    color: var(--hak-color);
+    font-size: var(--p-font);
+    line-height: 1.8;
+    margin-bottom: 4rem;
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 60px;
+    width: 100%;
+    background-color: #a05704;
+    overflow: hidden; 
+}
+.ads {
+    position: block;
+    font-size: 12px;
+    overflow: hidden;
+    align-items: center;
+    left: 2px;
+}
+
+.iletisim-ikon i {
+    height: 25px;
+    width: 25px;
+    color: var(--text-color);
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 15px;
+    transition: all .45s ease;
+}
+
+.iletisim-form {
+    position: relative;
+}
+.iletisim-form form input, form textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.iletisim-form textarea {
+    resize: none;
+    height: 240px;
+}
+.iletisim-form .submit {
+    display: inline-block;
+    font-size: 16px;
+    background: var(--span-color);
+    color: var(--text-color);
+    width: 160px;
+    transition: all .45s ease; 
+}
+.iletisim-form .submit:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.ulas {
+    background: var(--second-bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.ulas-text h2 {
+    color: var(--text-color);
+    margin: 18px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.ulas-text p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+.indexy {
+    text-align: center;
+    display: block;
+    font-size: 45px;
+    font-weight: 600;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 40%;
+    top: 45%;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+
